@@ -22,10 +22,7 @@ app.get('/', (req, res) => {
 
 // MongoDB connection
 const uri = "mongodb+srv://ironwood:ironwood@cluster0.gjqyu.mongodb.net/bait";
-mongoose.connect(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(uri)
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
