@@ -15,6 +15,11 @@ app.use(cors({
 }));
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Bait Booking API!');
+});
+
+
 // MongoDB connection
 const uri = "mongodb+srv://ironwood:ironwood@cluster0.gjqyu.mongodb.net/bait";
 mongoose.connect(uri, {
